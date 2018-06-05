@@ -1,15 +1,15 @@
 # SnakeSnack
 
-## INSTALL
+## Install
 
     $ npm install
 
-## START DEV SERVER
+## Start dev server
 
     $ npm run dev
 
 then go on http://localhost:3000
 
-## START PROD SERVER
+## Start prod server
 
     $ npm run prod
