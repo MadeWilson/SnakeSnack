@@ -1,19 +1,31 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, {PureComponent} from 'react'
 
-const Button = (props) => (
-    <button onClick={props.onclick}>
-        {props.label}
-    </button>
-)
+class Button extends PureComponent {
 
-Button.propTypes = {
-    onclick:  PropTypes.func.isRequired,
-    label: PropTypes.string,
-}
+    constructor(props){
+        super(props)
+        this.state= {
+            count: 0,
+            label: 'Click-me !'
+        }
+        this.handleClick = this.handleClick.bind(this)
+    }
 
-Button.defaultProps = {
-    label: 'Click-me !'
+    handleClick() {
+        console.log('Click !')
+        this.setState({
+            count: this.state.count + 1
+        })
+    }
+
+    render() {
+        return (
+            <button onClick={this.handleClick}>
+                {`You clicked me ${this.state.count}`}
+            </button>
+        )
+    }
+
 }
 
 export default Button
