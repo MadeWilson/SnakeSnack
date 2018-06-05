@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/MadeWilson/SnakeSnack/issues"
   },
-  "homepage": "https://github.com/MadeWilson/SnakeSnack#readme"
+  "homepage": "https://github.com/MadeWilson/SnakeSnack#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1"
+  }
 }
