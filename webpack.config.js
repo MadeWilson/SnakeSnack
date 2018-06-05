@@ -1,6 +1,6 @@
-const path = require('path')
-const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require("path")
+const webpack = require("webpack")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
 
 module.exports= {
     entry: [path.resolve('./src/index.js')],
