@@ -10,7 +10,7 @@ class App extends Component {
     render() {
         return (
             <div className="app">
-                <Grid rows={50} columns={50}/>
+                <Grid rows={48} columns={84}/>
             </div>
         )
     }
