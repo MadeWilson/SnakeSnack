@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react'
 import PropTypes from 'prop-types'
-import Cell from 'components/smart/Cell/index'
+import Cell from 'components/smart/Cell'
+import Snake from "components/smart/Snake"
 
 const styles = {
     row: {display: "flex"}
@@ -15,8 +16,8 @@ class Grid extends PureComponent {
     }
 
     handleDimension() {
-        this.props.definitions.map((value) => {
-            if (value.id == this.props.activeDefinition) {
+        this.props.parameters.definitions.map((value) => {
+            if (value.id == this.props.parameters.activeDefinition) {
                 this.dimension = ({"rows": value.height, "columns": value.width})
             }
         })

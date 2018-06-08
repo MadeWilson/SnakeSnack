@@ -1,9 +1,10 @@
 import React, {PureComponent} from 'react'
+import Snake from 'components/smart/Snake'
 
 const stylize = (props, state) => ({
     cell: {
-        height: '2px',
-        width: '2px',
+        height: '4px',
+        width: '4px',
         border: 'thin solid lightgrey'
     }
 })
@@ -16,7 +17,9 @@ class Cell extends PureComponent {
 
     render() {
         return (
-            <div id={this.props.coordonate} style={stylize(this.props).cell}></div>
+            <div id={this.props.coordonate} style={stylize(this.props).cell}>
+                {(this.props.coordonate == this.props.snake.currentPosition)? <Snake/> : ""}
+            </div>
         )
     }
 }
