@@ -16,7 +16,7 @@ class Grid extends PureComponent {
     }
 
     componentDidMount() {
-        let intervalId = setInterval(this.timer, 1000);
+        let intervalId = setInterval(this.timer, 500);
         this.setState({intervalId: intervalId});
     }
 
@@ -25,6 +25,7 @@ class Grid extends PureComponent {
     }
 
     timer() {
+        this.props.newFrame();
         this.props.snackMove();
     }
 

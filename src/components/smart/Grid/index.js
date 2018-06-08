@@ -1,6 +1,6 @@
 import {connect} from 'react-redux'
 import Grid from 'components/smart/Grid/presentational'
-import {newFrameStart} from "store/ducks/timer"
+import {newFrame} from "store/ducks/timer"
 import {snackMove} from "store/ducks/snake"
 
 const mapStateToProps = (state) => ({
@@ -15,6 +15,7 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
+    newFrame: () => dispatch(newFrame()),
     snackMove: () => dispatch(snackMove())
 })
 

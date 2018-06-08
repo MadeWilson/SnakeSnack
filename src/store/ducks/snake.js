@@ -41,8 +41,7 @@ export default function reducer(state = initial, action = {}) {
                     state.currentPosition.x = value.x + state.currentPosition.x
                     state.currentPosition.y = value.y + state.currentPosition.y
                     return {
-                        ...state,
-                        currentPosition: state.currentPosition
+                        ...state
                     }
                 }
             })
