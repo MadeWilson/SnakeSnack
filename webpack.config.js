@@ -16,11 +16,11 @@ module.exports= {
                 exclude: [path.resolve('./node_modules')],
                 use: 'babel-loader',
             },
-            {
-                test: /\.css$/,
-                exclude: [path.resolve('./node_modules')],
-                use: ['style-loader', 'css-loader']
-            }
+            // {
+            //     test: /\.css$/,
+            //     exclude: [path.resolve('./node_modules')],
+            //     use: ['style-loader', 'css-loader']
+            // }
         ]
     },
     plugins :[

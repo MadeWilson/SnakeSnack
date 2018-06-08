@@ -1,5 +1,17 @@
 import React, {Component} from 'react'
-import Grid from 'components/Grid'
+import Grid from 'components/smart/Grid'
+import Parameters from 'components/smart/Parameters'
+
+const styles = {
+    app: {
+        position: "relative",
+        minHeight: "100vp",
+        top: "0px",
+    },
+    maine: {
+        
+    }
+}
 
 class App extends Component {
 
@@ -9,8 +21,11 @@ class App extends Component {
 
     render() {
         return (
-            <div className="app">
-                <Grid rows={48} columns={84}/>
+            <div className="app" style={styles.app}>
+                <Parameters/>
+                <main>
+                    <Grid rows={48} columns={84}/>
+                </main>
             </div>
         )
     }

@@ -1,8 +1,8 @@
 import {connect} from 'react-redux'
-import Grid from 'components/Grid/presentational'
+import Cell from 'components/smart/Cell/presentational'
 
 const mapStateToProps = (state) => ({})
 
 const mapDispatchToProps = (dispatch) => ({})
 
-export default connect(mapStateToProps, mapDispatchToProps)(Grid)
+export default connect(mapStateToProps, mapDispatchToProps)(Cell)

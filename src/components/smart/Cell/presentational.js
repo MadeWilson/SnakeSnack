@@ -2,8 +2,8 @@ import React, {PureComponent} from 'react'
 
 const stylize = (props, state) => ({
     cell: {
-        height: '4px',
-        width: '4px',
+        height: '2px',
+        width: '2px',
         border: 'thin solid lightgrey'
     }
 })
