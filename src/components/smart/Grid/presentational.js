@@ -1,7 +1,6 @@
 import React, {PureComponent} from 'react'
 import PropTypes from 'prop-types'
 import Cell from 'components/smart/Cell'
-import Snake from "components/smart/Snake"
 
 const styles = {
     row: {display: "flex"}
@@ -13,6 +12,20 @@ class Grid extends PureComponent {
         super(props)
         this.handleDimension = this.handleDimension.bind(this)
         this.handleDimension()
+        this.timer = this.timer.bind(this)
+    }
+
+    componentDidMount() {
+        let intervalId = setInterval(this.timer, 1000);
+        this.setState({intervalId: intervalId});
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.props.intervalId);
+    }
+
+    timer() {
+        this.props.snackMove();
     }
 
     handleDimension() {
@@ -26,21 +39,26 @@ class Grid extends PureComponent {
     render() {
         this.handleDimension()
         return (
-            <div className="grid-container">
-                {
-                    Array(this.dimension.rows)
-                        .fill(true)
-                        .map((row, y) => (
-                            <div key={`rows-${y}`} style={styles.row}>
-                                {Array(this.dimension.columns)
-                                    .fill(true)
-                                    .map((column, x) =>
-                                        <Cell key={`cell-${x}`} coordonate={`${y}-${x}`}/>
-                                    )
-                                }
-                            </div>
-                        ))
-                }
+            <div>
+                <div>
+                    {this.props.timer.currentCount}
+                </div>
+                <div className="grid-container">
+                    {
+                        Array(this.dimension.rows)
+                            .fill(true)
+                            .map((row, y) => (
+                                <div key={`rows-${y}`} style={styles.row}>
+                                    {Array(this.dimension.columns)
+                                        .fill(true)
+                                        .map((column, x) =>
+                                            <Cell key={`cell-${x}`} coordonate={`${y}-${x}`}/>
+                                        )
+                                    }
+                                </div>
+                            ))
+                    }
+                </div>
             </div>
         )
     }

@@ -8,9 +8,6 @@ const styles = {
         minHeight: "100vp",
         top: "0px",
     },
-    maine: {
-        
-    }
 }
 
 class App extends Component {

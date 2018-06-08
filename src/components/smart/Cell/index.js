@@ -4,7 +4,8 @@ import Cell from 'components/smart/Cell/presentational'
 const mapStateToProps = (state) => ({
     snake: {
         currentPosition: state.snake.currentPosition,
-        direction: state.snake.direction
+        direction: state.snake.direction,
+        currentDirection: state.snake.direction
     }
 })
 
