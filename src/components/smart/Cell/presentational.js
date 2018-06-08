@@ -16,7 +16,7 @@ class Cell extends PureComponent {
 
     render() {
         return (
-            <div style={stylize(this.props).cell}></div>
+            <div id={this.props.coordonate} style={stylize(this.props).cell}></div>
         )
     }
 }

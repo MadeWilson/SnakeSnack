@@ -1,8 +1,10 @@
 import { createStore, combineReducers } from 'redux'
 import * as parameters from 'store/ducks/parameter'
+import * as snake from 'store/ducks/snake'
 
 const reducer = combineReducers({
-    parameters: parameters.default
+    parameters: parameters.default,
+    snake: snake.default
 })
 
 const store = createStore(

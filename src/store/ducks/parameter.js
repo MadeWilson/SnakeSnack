@@ -32,6 +32,7 @@ export default function reducer (state = initial, action = {}) {
     }
 }
 
+// Action Creator
 export const updateGrid = (newActiveParameter) => ({
     type: UPDATE_DEFINITION,
     newActiveParameter

@@ -29,12 +29,12 @@ class Grid extends PureComponent {
                 {
                     Array(this.dimension.rows)
                         .fill(true)
-                        .map((foo, x) => (
-                            <div key={`rows-${x}`} style={styles.row}>
+                        .map((row, y) => (
+                            <div key={`rows-${y}`} style={styles.row}>
                                 {Array(this.dimension.columns)
                                     .fill(true)
-                                    .map((bar, y) =>
-                                        <Cell key={`cell-${y}`}/>
+                                    .map((column, x) =>
+                                        <Cell key={`cell-${x}`} coordonate={`${y}-${x}`}/>
                                     )
                                 }
                             </div>
