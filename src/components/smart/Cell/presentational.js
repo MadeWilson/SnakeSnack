@@ -16,7 +16,6 @@ class Cell extends PureComponent {
     }
 
     render() {
-        console.log(`${this.props.snake.currentPosition.y}-${this.props.snake.currentPosition.x}`)
         return (
             <div id={this.props.coordonate} style={stylize(this.props).cell}>
                 {(this.props.coordonate == `${this.props.snake.currentPosition.y}-${this.props.snake.currentPosition.x}`)? <Snake/> : ""}

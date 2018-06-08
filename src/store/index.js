@@ -5,8 +5,8 @@ import * as timer from 'store/ducks/timer'
 
 const reducer = combineReducers({
     parameters: parameters.default,
+    timer: timer.default,
     snake: snake.default,
-    timer: timer.default
 })
 
 const store = createStore(
